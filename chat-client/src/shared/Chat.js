@@ -81,7 +81,7 @@ class Chat extends Component {
 
       // Server Pusher
 
-      const pusher = new Pusher('5d6f9e4d4cfcf0c6ca5b', {
+      const pusher = new Pusher('df5588bd088489a05c26', {
          cluster: 'eu',
          encrypted: true
       });

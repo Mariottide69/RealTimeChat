@@ -11,7 +11,7 @@ import "./Chat.css";
 
 // const server_url = "http://localhost:8000";
 //const server_url ="https://chat-iota-six-34.vercel.app/chat-server-node.vercel.app"
-const server_url = "https://chat-server-node.vercel.app";
+const server_url = "https://real-time-chat-by-mariottide.vercel.app";
 
 // const messages = [
 //   {id:"1", text:"Dummy message 1"},
@@ -45,7 +45,7 @@ class Chat extends Component {
             text: "",
          },
       });
-      let channelName = 'chat-channel';
+      let channelName = 'poseidon';
       axios.post(`${server_url}/api/message?channel=${channelName}`, this.state.message)
    };
 
@@ -81,12 +81,12 @@ class Chat extends Component {
 
       // Server Pusher
 
-      const pusher = new Pusher('4c421a35144eb7295cae', {
+      const pusher = new Pusher('5d6f9e4d4cfcf0c6ca5b', {
          cluster: 'eu',
          encrypted: true
       });
 
-      var channel = pusher.subscribe('chat-channel');
+      var channel = pusher.subscribe('poseidon');
       channel.bind('message', (data) => {
          this.setState(prevState => ({
             messages: [...prevState.messages, data]

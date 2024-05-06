@@ -23,11 +23,10 @@ app.use(cors({
       'http://localhost:5000',
       'http://localhost:4200',
       'http://localhost:8000',
-      'https://chat-iota-six-34.vercel.app',
-      'https://ignaziosammarco.vercel.app/',
-      'https://chat-netsamma.vercel.app/',
+      'https://real-time-chat-by-mariottide.vercel.app/',
    ]
 }));
+// 'https://chat-iota-six-34.vercel.app',
 
 app.set('PORT', process.env.PORT || 8000);
 
